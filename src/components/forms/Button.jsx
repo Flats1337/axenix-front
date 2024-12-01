@@ -1,4 +1,4 @@
-function Button({type, name, style = null, Text = "", isDisable = null, onClickEvent = null}) {
+function Button({children, type, name, style = null, Text = "", isDisable = null, onClickEvent = null}) {
     const Type = type;
     const Name = name;
     const Style = style || "";
@@ -10,7 +10,7 @@ function Button({type, name, style = null, Text = "", isDisable = null, onClickE
                 className={Style}
                 disabled={IsDisable}
                 onClick={onClickEvent}>
-            {Text}
+            {children}
         </button>
     );
 }

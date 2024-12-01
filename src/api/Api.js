@@ -6,18 +6,11 @@ const requestOptions = {
     }
 }
 
+export async function apiAuth(username, password) {
+    return await fetch(`/api/auth?username=${username}&password=${password}`, requestOptions).then(response => response.json())
+}
+
 export async function apiCheckToken(token) {
-    return await fetch(`/api/auth?token=${token}`, requestOptions).then(response => response.json())
+    return await fetch(`/api/checkToken?token=${token}`, requestOptions).then(response => response.json())
 }
 
-export async function apiServerStatus(token) {
-    return await fetch(`/api/serverStatus?token=${token}`, requestOptions).then(response => response.json())
-}
-
-export async function apiCreateChat(token) {
-    return await fetch(`/api/createChat?token=${token}`, requestOptions).then(response => response.json())
-}
-
-export async function apiSendMessage(token, chatId, message) {
-    return await fetch(`/api/message?token=${token}&chat_id=${chatId}&message=${message}`, requestOptions).then(response => response.json())
-}
