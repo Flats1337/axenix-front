@@ -1,0 +1,5 @@
+/* export const VAR_NAME = VALUE; */
+
+export const SERVER_CHECK_STATUS_DELAY = 3000;
+export const GHOST_ANIMATE_DELAY = 400;
+export const PRELOAD_ANIMATE_DELAY = 100 + (GHOST_ANIMATE_DELAY * 2);
